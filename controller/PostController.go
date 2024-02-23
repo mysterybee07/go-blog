@@ -97,3 +97,7 @@ func UniquePost(c *fiber.Ctx) error {
 	database.DB.Model(&blog).Where("user_id=?", id).Preload("User").Find(&blog)
 	return c.JSON(&blog)
 }
+
+// func UpdatePost(c *fiber.Ctx) error {
+
+// }
